@@ -8,13 +8,13 @@ public class App {
         Employee employee = new Employee();
         TinhHieu tinhHieu = new TinhHieu();
         TinhTong tinhTong = new TinhTong();
-
+        ExtendFinalClass extendFinalClass = new ExtendFinalClass();
+        extendFinalClass.printName();
         int result1 = tinhTong.total(5, 4);
         int result = tinhHieu.total(5, 4);
         System.out.println(result);
         System.out.println(result1);
         employee.setAge("12");
-
         List<Person.Address> addresses = new ArrayList<Person.Address>();
         Person.Address address1 = new Person.Address();
         address1.setCity("Quy Nhon");
@@ -22,7 +22,6 @@ public class App {
         address1.setStreet("02 Ho Van Hue");
         addresses.add(address1);
         person1.setAddress(addresses);
-
         System.out.println(employee);
     }
 }
