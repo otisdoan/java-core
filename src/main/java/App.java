@@ -3,25 +3,55 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        Person person1 = new Person();
-        Person person2 = new Person("QE180112", "12", "Le Doan Hieu");
-        Employee employee = new Employee();
-        TinhHieu tinhHieu = new TinhHieu();
-        TinhTong tinhTong = new TinhTong();
-        ExtendFinalClass extendFinalClass = new ExtendFinalClass();
-        extendFinalClass.printName();
-        int result1 = tinhTong.total(5, 4);
-        int result = tinhHieu.total(5, 4);
-        System.out.println(result);
-        System.out.println(result1);
-        employee.setAge("12");
-        List<Person.Address> addresses = new ArrayList<Person.Address>();
-        Person.Address address1 = new Person.Address();
-        address1.setCity("Quy Nhon");
-        address1.setState("Cali");
-        address1.setStreet("02 Ho Van Hue");
-        addresses.add(address1);
-        person1.setAddress(addresses);
-        System.out.println(employee);
+        String s1 = "Le Doan Hieu";
+        System.out.println(s1.charAt(6));
+        System.out.println(s1.length());
+
+        String name = "Le Doan Hieu";
+        int age = 24;
+
+        String s2 = String.format("Hello, My name is %s. I am %d year old", name, age);
+        String s3 = name.substring(1, 5);
+        String s4 = "Hieu";
+        if (name.contains(s4)) {
+            System.out.println("True");
+        } else {
+            System.out.println("False");
+        }
+        String s5 = String.join("-", name, s4);
+
+        if (s4.equals("Hi")) {
+            System.out.println("Equals true");
+        }
+
+        String a = "Hieu";
+        String b = "hieu1";
+
+        if (a.equalsIgnoreCase(b)) {
+            System.out.println("Equals");
+        }
+
+        String c = " ";
+        if (c.trim().isEmpty()) {
+            System.out.println("Hello");
+        } else {
+            System.out.println("No hello");
+        }
+
+        String s = "  Hieu  A";
+        String s8 = "Hieu B";
+
+        String[] split = name.split(" ");
+        for (String sg : split) {
+            System.out.print(sg + " ");
+        }
+        System.out.println(name.replace("Hieu", "Hoa"));
+        System.out.println(s.trim().concat(s8));
+        System.out.println(s);
+        System.out.println(s.trim());
+        System.out.println(s5);
+        System.out.println(s3);
+        System.out.println(s2);
+
     }
 }
