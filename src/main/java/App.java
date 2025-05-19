@@ -2,12 +2,13 @@ import java.util.*;
 
 public class App {
     public static void main(String[] args) {
-        HashSet<String> hashSet = new HashSet<>();
-        hashSet.add("A");
-        hashSet.add("B");
-        hashSet.add("C");
-        hashSet.add(null);
-        hashSet.add("Le Doan Hieu");
-        System.out.println(hashSet);
+        TreeSet<Integer> treeSet = new TreeSet<>();
+
+        treeSet.add(10);
+        treeSet.add(15);
+        treeSet.add(20);
+        treeSet.add(25);
+
+        System.out.println(treeSet.ceiling(10));
     }
 }
