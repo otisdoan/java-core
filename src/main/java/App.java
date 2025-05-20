@@ -1,14 +1,11 @@
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class App {
     public static void main(String[] args) {
-        TreeSet<Integer> treeSet = new TreeSet<>();
-
-        treeSet.add(10);
-        treeSet.add(15);
-        treeSet.add(20);
-        treeSet.add(25);
-
-        System.out.println(treeSet.ceiling(10));
+        Pattern pattern = Pattern.compile("Hieu*");
+        Matcher matcher = pattern.matcher("Hieu");
+        System.out.println(matcher.find());
     }
 }
