@@ -7,5 +7,14 @@ public class App {
         Pattern pattern = Pattern.compile("Hieu*");
         Matcher matcher = pattern.matcher("Hieu");
         System.out.println(matcher.find());
+
+        boolean isOK = Pattern.compile("Hieu").matcher("Hieu").matches();
+        System.out.println(isOK);
+
+        boolean isYes = Pattern.matches("Java", "Java");
+        System.out.println(isYes);
+
+        boolean isNo = Pattern.compile("Hieu").matcher("Hieu").find();
+        System.out.println(isNo);
     }
 }
